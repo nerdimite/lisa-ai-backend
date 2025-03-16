@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "lisa-ai"
+version = "2.0.0"
+description = "AI Meeting Assistant for transcription, summarization, and search"
+authors = ["Your Name <your.email@example.com>"]
+readme = "README.md"
+packages = [{include = "lisa"}]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<=3.12.3"
+chromadb = "^0.6.3"
+openai = "^1.66.3"
+numpy = "^2.2.3"
+fastapi = "^0.115.11"
+uvicorn = "^0.34.0"
+moviepy = "^2.1.2"
+jinja2 = "^3.1.6"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.2"
+black = "^23.9.1"
+isort = "^5.12.0"
+pylint = "^3.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+start = "lisa.main:main"
